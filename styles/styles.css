@@ -1,0 +1,152 @@
+:root {
+  font-size: 16px;
+  font-family: verdana;
+  --black: #17202a;
+  --white: #fbfcfc;
+  --gray1: #aeb3b9;
+  --gray2: #37404b;
+  --mainC: #f1c40f;
+  --secondaryC: #f39c12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--white);
+}
+
+/* CARD */
+#cards-container {
+  width: 90vw;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card,
+.add-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+  width: 16rem;
+  height: fit-content;
+  box-shadow: 0 0 8px var(--gray1);
+  border-radius: 5px;
+  border: 1rem solid var(--mainC);
+  border-top: 0.5rem solid var(--mainC);
+  transition: scale 0.2s;
+}
+
+.title-container,
+.options-container {
+  padding: 0.9rem;
+  background-color: var(--mainC);
+  text-align: center;
+}
+
+.title,
+.content {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+.title-container {
+  border-bottom: 2px solid var(--secondaryC);
+}
+.title {
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-align: center;
+}
+.title:hover {
+  border-bottom: 2px solid var(--secondaryC);
+  margin-bottom: -2px;
+}
+
+.subtitle {
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+}
+
+.content-container {
+  padding: 1rem 1.5rem;
+  background-color: var(--white);
+}
+.content {
+  width: 100%;
+  min-height: 12rem;
+  font-size: 1rem;
+  font-family: verdana;
+  resize: none;
+}
+
+.options-container {
+  border-top: 2px solid var(--secondaryC);
+}
+
+.icon {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  height: 1.2em;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.icon:hover {
+  margin: -1px calc(0.5rem - 1px);
+  border: 1px solid var(--secondaryC);
+}
+
+.delete-btn {
+  float: right;
+  margin: -0.5rem -1rem;
+  padding: 0.2rem;
+  height: 1.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn img {
+  height: 1.8rem;
+}
+.delete-btn:hover {
+  margin: calc(-0.5rem - 1px) calc(-1rem - 1px);
+  border: 1px solid var(--secondaryC);
+}
+
+/* ADD CARD */
+.add-card {
+  filter: grayscale(1) contrast(0.5);
+}
+
+#plus-card {
+  position: absolute;
+  top: calc(50% - 2.5rem);
+  left: calc(50% - 2.5rem);
+  width: 5rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+#plus-card:hover {
+  scale: 1.05;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1165px) {
+  #cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+}

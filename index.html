@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Cards</title>
+</head>
+
+<body>
+    <div id="cards-container">
+        <div id="first-card" class="card">
+            <div class="title-container">
+                <div class="delete-btn"><img src="img/icons/delete-icon.svg" alt="Eliminar tarjeta" title="Eliminar tarjeta"></div>
+                <input class="title" type="text" value="Título">
+                <input class="subtitle title" type="text" value="Subtítulo">
+            </div>
+            <div class="content-container">
+                <textarea name="content" class="content" placeholder="Contenido..."></textarea>
+            </div>
+            <div class="options-container">
+                <div>
+                    <img src="img/icons/img-icon.svg" class="icon" alt="Agregar imagen" title="Agregar imagen">
+                    <img src="img/icons/file-icon.svg" class="icon" alt="Agregar archivo" title="Agregar archivo">
+                    <img src="img/icons/color-icon.svg" class="icon" alt="Cambiar color" title="Cambiar color">
+                    <img src="img/icons/size-icon.svg" class="icon" alt="Cambiar tamaño" title="Cambiar tamaño">
+                </div>
+            </div>
+        </div>
+        <div class="add-card" id="add-card">
+            <div class="title-container">
+                <input class="title" type="text" value="Agregar" readonly>
+                <input class="subtitle title" type="text" value="Tarjeta" readonly>
+            </div>
+            <div class="content-container">
+                <img src="img/icons/plus-icon.svg" id="plus-card" alt="Agregar tarjeta" title="Agregar tarjeta">
+                <textarea name="content" class="content" readonly></textarea>
+            </div>
+            <div class="options-container">
+                <div>
+                    <img src="img/icons/circle-icon.svg" class="icon" alt="Agregar imagen" title="Agregar imagen">
+                    <img src="img/icons/circle-icon.svg" class="icon" alt="Agregar archivo" title="Agregar archivo">
+                    <img src="img/icons/circle-icon.svg" class="icon" alt="Cambiar color" title="Cambiar color">
+                    <img src="img/icons/circle-icon.svg" class="icon" alt="Cambiar tamaño" title="Cambiar tamaño">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
