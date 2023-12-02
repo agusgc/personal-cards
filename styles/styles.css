@@ -18,6 +18,19 @@ body {
   background-color: var(--white);
 }
 
+/* HEADER & FOOTER */
+header,
+footer {
+  margin: 0;
+  padding: 1rem;
+  height: 3rem;
+  background-color: var(--secondaryC);
+}
+
+footer {
+  margin-top: 3rem;
+}
+
 /* CARD */
 #cards-container {
   width: 90vw;
@@ -48,25 +61,24 @@ body {
   text-align: center;
 }
 
-.title,
+.title, .subtitle,
 .content {
   border: none;
   outline: none;
   background-color: transparent;
   color: var(--black);
-  scroll-behavior: smooth;
 }
 
 .title-container {
   border-bottom: 2px solid var(--secondaryC);
 }
-.title {
+.title, .subtitle {
   width: 80%;
   font-size: 1.5rem;
   font-weight: 100;
   text-align: center;
 }
-.title:hover {
+.title:hover, .subtitle:hover {
   border-bottom: 2px solid var(--secondaryC);
   margin-bottom: -2px;
 }
@@ -79,13 +91,24 @@ body {
 .content-container {
   padding: 1rem 1.5rem;
   background-color: var(--white);
+  height: 12rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: center;
 }
 .content {
   width: 100%;
-  min-height: 12rem;
+  height: fit-content;
   font-size: 1rem;
   font-family: verdana;
   resize: none;
+  overflow: hidden;
+  text-align: start;
+}
+
+.content-container img {
+  height: 6rem;
+  margin: 0.5rem 0;
 }
 
 .options-container {
@@ -104,7 +127,7 @@ body {
   border: 1px solid var(--secondaryC);
 }
 
-.delete-btn {
+.delete-btn, #quit-add-image-form {
   float: right;
   margin: -0.5rem -1rem;
   padding: 0.2rem;
@@ -137,6 +160,61 @@ body {
   scale: 1.05;
 }
 
+/* ADD IMAGE */
+#add-image-form {
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+  padding: 2.5rem;
+  height: fit-content;
+  width: fit-content;
+  background-color: var(--white);
+  box-shadow: 0 0 4px var(--gray1);
+  border-radius: 5px;
+}
+
+#add-image-container{
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: start;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #37404b69;
+}
+
+#add-image-form h3 {
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+}
+#add-image-form input {
+  margin-bottom: 1rem;
+}
+.image-position-text{
+  margin-top: 2rem;
+  margin-bottom: 1rem !important;
+}
+.input-image {
+  display: none;
+}
+.input-image-label, #add-img-submit {
+  margin-right: 20px;
+  padding: 0.7rem;
+  background-color: var(--mainC);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input-image-label:hover, #add-img-submit:hover{
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+#add-img-submit{
+  font-size: 1rem;
+  border: none;
+  padding: 0.7rem 1rem;
+}
 
 /* MEDIA QUERY */
 @media screen and (max-width: 1165px) {

@@ -9,25 +9,9 @@
 </head>
 
 <body>
+    <header></header>
+
     <div id="cards-container">
-        <div id="first-card" class="card">
-            <div class="title-container">
-                <div class="delete-btn"><img src="img/icons/delete-icon.svg" alt="Eliminar tarjeta" title="Eliminar tarjeta"></div>
-                <input class="title" type="text" value="Título">
-                <input class="subtitle title" type="text" value="Subtítulo">
-            </div>
-            <div class="content-container">
-                <textarea name="content" class="content" placeholder="Contenido..."></textarea>
-            </div>
-            <div class="options-container">
-                <div>
-                    <img src="img/icons/img-icon.svg" class="icon" alt="Agregar imagen" title="Agregar imagen">
-                    <img src="img/icons/file-icon.svg" class="icon" alt="Agregar archivo" title="Agregar archivo">
-                    <img src="img/icons/color-icon.svg" class="icon" alt="Cambiar color" title="Cambiar color">
-                    <img src="img/icons/size-icon.svg" class="icon" alt="Cambiar tamaño" title="Cambiar tamaño">
-                </div>
-            </div>
-        </div>
         <div class="add-card" id="add-card">
             <div class="title-container">
                 <input class="title" type="text" value="Agregar" readonly>
@@ -48,6 +32,30 @@
         </div>
     </div>
 
+    <div id="add-image-container">
+        <form id="add-image-form">
+            <img src="img/icons/delete-icon.svg" alt="Cerrar" title="Cerrar" id="quit-add-image-form">
+            <h3>Elige una imagen</h3>
+            <div>
+                <input type="file" class="input-image" id="input-image" accept="image/*">
+                <p><label for="input-image" class="input-image-label">Subir imagen</label>
+                <span id="image-name">Seleccione una imagen</span></p>
+            </div>
+            <h3 class="image-position-text">Posición de la imagen</h3>
+            <div>
+                <input type="radio" name="imagePosition" value="top" id="image-top" class="image-position image-top">
+                <label for="image-top">Arriba del contenido</label>
+            </div>
+            <div>
+                <input type="radio" name="imagePosition" value="bottom" id="image-bottom"
+                    class="image-position image-bottom">
+                <label for="image-bottom">Debajo del contenido</label>
+            </div>
+            <button type="submit" id="add-img-submit">Agregar</button>
+        </form>
+    </div>
+
+    <footer></footer>
     <script src="scripts/scripts.js"></script>
 </body>
 
